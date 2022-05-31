@@ -3,12 +3,33 @@
     <h1>TOP 50: THE RANKING</h1>
     <div class="table-container">
       <div class="table-col">
-          <RestaurantRow />
+        <RestaurantRow
+          v-for="restaurant in restaurantsOrganized.first"
+          :key="restaurant.id"
+          :name="restaurant.name"
+          :rank="restaurant.rank"
+        />
       </div>
-      <div class="table-col"></div>
+      <div class="table-col">
+        <RestaurantRow
+          v-for="restaurant in restaurantsOrganized.second"
+          :key="restaurant.id"
+          :name="restaurant.name"
+          :rank="restaurant.rank"
+        />
+      </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import restaurants from "@/data.json";
+
+const restaurantsOrganized = {
+  first: [...restaurants].slice(0, 25),
+  second: [...restaurants].slice(25, 50),
+};
+</script>
 
 <style scoped>
 .table {
