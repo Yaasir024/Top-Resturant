@@ -3,7 +3,7 @@
     <Nav />
     <div class="container">
       <h1>Welcome to Restaurantly</h1>
-      <a href="/restaurant">Go to restaurant</a>
+      <a href="/restaurants">Go to restaurant</a>
     </div>
   </div>
 </template>
