@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <h4 class="header rank">{{ rank }}</h4>
-    <a href="/" class="header link">{{ name }}</a>
+    <a :href="`/restaurant/${name}`" class="header link">{{ name }}</a>
   </div>
 </template>
 
