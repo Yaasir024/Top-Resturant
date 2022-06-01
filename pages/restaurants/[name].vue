@@ -29,6 +29,16 @@ const route = useRoute();
 const name = route.params.name;
 
 const restaurant = restaurants.find((r) => r.name === name);
+
+useMeta({
+  title:restaurant ? name : "404- Restaurant not found",
+  meta: [
+    {
+      name: "viewport",
+      content: "width=device-width",
+    },
+  ],
+})
 </script>
 
 <style scoped>
